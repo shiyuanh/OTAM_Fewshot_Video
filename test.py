@@ -108,7 +108,7 @@ def main():
 
     data_length = 1
     val_loader = torch.utils.data.DataLoader(
-        TSNDataSet(args,'/data/users/shiyuan/HMDB51/coviar_input/TV_L1',
+        TSNDataSet(args, args.data_dir,
                    args.val_list,
                    new_length=data_length,
                    random_shift=False,

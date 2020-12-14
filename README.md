@@ -5,7 +5,7 @@ This repo contains the implementation of multi-modal OTAM and the training/testi
 #### Data Preparation
 We follow the steps in https://github.com/open-mmlab/mmaction/blob/master/data_tools/hmdb51/PREPARING_HMDB51.md to download and extract the RGB and Optical Flow frames for HMDB51 dataset. Specifically, we order the frames as follows
 
-- action action
+- action_class
   - video_url
     - img_00001.jpg
     - flow_u_00001.jpg
@@ -18,7 +18,7 @@ Training command is as follows:
 ```
 python main.py --modality [MODALITY] --data_dir [DATA_DIR] --fusion_mode [FUSION_MODE]
 ```
-`[DATA_DIR]` is the directory where you put the RGB and Optical Flow frames. `MODALITY` is one of RGB, Flow, Joint to train models for different modalities. `FUSION_MODE` is only used for Joint modality, it is one of cat, avg, mlp that corresponds to fusion by feautre concatenation, averaging or multi-layer perception learning. The model weights would be saved under `logs/[MODALITY]_[NUM_SEGMENTS]_[FUSION_MODE]`
+`DATA_DIR` is the directory where you put the RGB and Optical Flow frames. `MODALITY` is one of `RGB`, `Flow`, `Joint` to train models for different modalities. `FUSION_MODE` is only used for Joint modality, it is one of `cat`, `avg`, `mlp` that corresponds to fusion by feautre concatenation, averaging or multi-layer perception learning. The model weights would be saved under `logs/[MODALITY]_[NUM_SEGMENTS]_[FUSION_MODE]`
 
 #### Testing
 Testing commad is as follows:

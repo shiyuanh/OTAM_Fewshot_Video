@@ -1,16 +1,4 @@
-# COMSW 4995 Deep Learning for Computer Vision Final Project
 ## Multi-modal Few Shot Video Recognition via Temporal Alignment
-This repo contains the implementation of multi-modal OTAM and the training/testing code on HMDB51 dataset.
-
-#### Data Preparation
-We follow the steps in https://github.com/open-mmlab/mmaction/blob/master/data_tools/hmdb51/PREPARING_HMDB51.md to download and extract the RGB and Optical Flow frames for HMDB51 dataset. Specifically, we order the frames as follows
-
-- action_class
-  - video_url
-    - img_00001.jpg
-    - flow_u_00001.jpg
-    - flow_v_00001.jpg
-    - ...
 
 
 #### Training
